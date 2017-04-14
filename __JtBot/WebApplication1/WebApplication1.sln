@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6BC873D7-4B5F-41B6-915D-80C9617D56D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C945E4DB-3779-4E40-86A8-A04CFF05DE86}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebApplication1", "src\WebApplication1\WebApplication1.xproj", "{D43FFC16-FA57-4DF0-AC66-326BE6C2670A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraBridge", "JiraBridge\JiraBridge.csproj", "{94D3B55E-5C51-4B45-BF1E-339E0028DB18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBridge", "TelegramBridge\TelegramBridge.csproj", "{BB214B52-2A5B-4F6C-934E-932C11C9C619}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D43FFC16-FA57-4DF0-AC66-326BE6C2670A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D43FFC16-FA57-4DF0-AC66-326BE6C2670A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D43FFC16-FA57-4DF0-AC66-326BE6C2670A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D43FFC16-FA57-4DF0-AC66-326BE6C2670A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94D3B55E-5C51-4B45-BF1E-339E0028DB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D3B55E-5C51-4B45-BF1E-339E0028DB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D3B55E-5C51-4B45-BF1E-339E0028DB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D3B55E-5C51-4B45-BF1E-339E0028DB18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB214B52-2A5B-4F6C-934E-932C11C9C619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB214B52-2A5B-4F6C-934E-932C11C9C619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB214B52-2A5B-4F6C-934E-932C11C9C619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB214B52-2A5B-4F6C-934E-932C11C9C619}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D43FFC16-FA57-4DF0-AC66-326BE6C2670A} = {6BC873D7-4B5F-41B6-915D-80C9617D56D7}
+		{94D3B55E-5C51-4B45-BF1E-339E0028DB18} = {6BC873D7-4B5F-41B6-915D-80C9617D56D7}
+		{BB214B52-2A5B-4F6C-934E-932C11C9C619} = {6BC873D7-4B5F-41B6-915D-80C9617D56D7}
+	EndGlobalSection
+EndGlobal
