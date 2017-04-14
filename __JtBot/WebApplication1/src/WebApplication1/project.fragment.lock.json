@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "exports": {
+    "JiraBridge/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/JiraBridge.dll": {}
+      },
+      "runtime": {
+        "../packages/Atlassian.SDK.9.2.4/lib/Atlassian.Jira.dll": {},
+        "../packages/Newtonsoft.Json.9.0.1/lib/net45/Newtonsoft.Json.dll": {},
+        "../packages/RestSharp.105.2.3/lib/net452/RestSharp.dll": {},
+        "bin/Debug/JiraBridge.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/JiraBridge.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}
