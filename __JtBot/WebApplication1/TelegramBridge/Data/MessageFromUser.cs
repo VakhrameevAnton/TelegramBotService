@@ -7,11 +7,12 @@ using Newtonsoft.Json.Linq;
 
 namespace TelegramBridge.Data
 {
-    /*public class MessageFromUser
+    public class MessageFromUser
     {
-        public result[] result { get; set; }
+        public string ok { get; set; }
+        public List<Result> result { get; set; }
     }
-    public class result
+    public class Result
     {
         public int update_id { get; set; }
         public message message { get; set; }
@@ -35,5 +36,5 @@ namespace TelegramBridge.Data
         public int id { get; set; }
         public string first_name { get; set; }
         public string username { get; set; }
-    } */       
+    }       
 }

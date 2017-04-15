@@ -32,13 +32,13 @@ namespace TelegramBridge
                     string response = webClient.DownloadString("https://api.telegram.org/bot" + Token + "/getupdates?offset="+(LastUpdateID+1));
                     if (response.Length <= 23)
                         continue;
-                    var N = (JObject)JsonConvert.DeserializeObject(response);
-                    foreach (var n in N["result"])
+                    var N = JsonConvert.DeserializeObject<MessageFromUser>(response);
+                    foreach (var item in N.result)
                     {
-                        LastUpdateID = (int)n.SelectToken("update_id");
-                        e.name = (string)n.SelectToken("message.from.username");
-                        e.message = (string)n.SelectToken("message.text");
-                        e.chatId = (int)n.SelectToken("message.chat.id");
+                        LastUpdateID = item.update_id;
+                        e.message = item.message.text;
+                        e.name = item.message.from.username;
+                        e.chatId = item.message.chat.id;
                     }
                 }
                 ResponseReceived(this, e);
