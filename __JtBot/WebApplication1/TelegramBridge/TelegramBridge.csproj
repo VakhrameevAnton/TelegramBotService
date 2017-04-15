@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\IncomeMessageService.cs" />
     <Compile Include="Data\MessageFromUser.cs" />
     <Compile Include="SimpleJson.cs" />
     <Compile Include="TelegramWrapper.cs" />

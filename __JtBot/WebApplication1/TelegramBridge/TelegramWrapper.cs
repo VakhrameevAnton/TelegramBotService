@@ -25,6 +25,8 @@ namespace TelegramBridge
 
         public void GetUpdates()
         {
+            IncomeMessageService incomeMessageService = new IncomeMessageService();
+
             while (true)
             {
                 using (WebClient webClient = new WebClient())
@@ -33,12 +35,12 @@ namespace TelegramBridge
                     if (response.Length <= 23)
                         continue;
                     var N = JsonConvert.DeserializeObject<MessageFromUser>(response);
-                    foreach (var item in N.result)
+                    foreach (var income in N.result)
                     {
-                        LastUpdateID = item.update_id;
-                        e.message = item.message.text;
-                        e.name = item.message.from.username;
-                        e.chatId = item.message.chat.id;
+                        LastUpdateID = income.update_id;
+                        e.message = income.message.text;
+                        e.name = income.message.from.username ?? incomeMessageService.GetUserFio(income);
+                        e.chatId = income.message.chat.id;
                     }
                 }
                 ResponseReceived(this, e);

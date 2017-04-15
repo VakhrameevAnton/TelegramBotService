@@ -9,7 +9,6 @@ namespace TelegramBridge.Data
 {
     public class MessageFromUser
     {
-        public string ok { get; set; }
         public List<Result> result { get; set; }
     }
     public class Result
@@ -29,6 +28,7 @@ namespace TelegramBridge.Data
     {
         public int ind { get; set; }
         public string first_name { get; set; }
+        public string last_name { get; set; }
         public string username { get; set; }
     }
     public class message_chat
