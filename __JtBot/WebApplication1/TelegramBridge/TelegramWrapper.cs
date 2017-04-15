@@ -11,12 +11,12 @@ namespace TelegramBridge
     {
         public string name;
         public string message;
-        public string chatId;
+        public int chatId;
     }
 
     public class TelegramRequest
     {
-        JsonService jsonService = new JsonService();
+        //JsonService jsonService = new JsonService();
 
         public string Token = "376883152:AAF8p2MM4lgqCiNk7dPnxcr0MQaCsnsZr00";
         int LastUpdateID = 0;
@@ -33,12 +33,12 @@ namespace TelegramBridge
                     if (response.Length <= 23)
                         continue;
                     var N = (JObject)JsonConvert.DeserializeObject(response);
-                    foreach (var n in N)
+                    foreach (var n in N["result"])
                     {
                         LastUpdateID = (int)n.SelectToken("update_id");
-                        e.name = n.Value.;
-                        e.message = jsonService.GetMessageText(n);
-                        e.chatId = jsonService.GetChatId(n);
+                        e.name = (string)n.SelectToken("message.from.username");
+                        e.message = (string)n.SelectToken("message.text");
+                        e.chatId = (int)n.SelectToken("message.chat.id");
                     }
                 }
                 ResponseReceived(this, e);
